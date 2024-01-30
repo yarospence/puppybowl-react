@@ -1,12 +1,18 @@
-import {Routes, Route} from 'react-router-dom';
-import PlayerList from './components/PlayerList';
+import PlayerList from './components/PlayerList.jsx';
+import PuppyDetails from './components/PuppyDetails.jsx';
+import { useState } from 'react';
 
 const App = () => {
+
+  const [showDetails, setShowDetails] = useState(false)
+
   return (
     <>
-      <Routes>
-        <Route path='/pets' element={<h1>Hello</h1>} />
-      </Routes>
+      <h1>Puppy Bowl</h1>
+
+      {
+        showDetails ? <PuppyDetails />: <PlayerList setShowDetails={setShowDetails}/>
+      }
     </>
   )  
 }
