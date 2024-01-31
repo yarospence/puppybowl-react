@@ -3,15 +3,16 @@ import PuppyDetails from './components/PuppyDetails.jsx';
 import { useState } from 'react';
 
 const App = () => {
-
+  
   const [showDetails, setShowDetails] = useState(false)
-
+  const [singlePuppyDetailsURL, setsinglePuppyDetailsURL] = useState(``);
+  
   return (
     <>
       <h1>Puppy Bowl</h1>
 
       {
-        showDetails ? <PuppyDetails />: <PlayerList setShowDetails={setShowDetails}/>
+        showDetails ? <PuppyDetails /> : <PlayerList setShowDetails={setShowDetails} setsinglePuppyDetailsURL = {setsinglePuppyDetailsURL}/>
       }
     </>
   )  

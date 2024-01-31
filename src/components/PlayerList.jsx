@@ -20,10 +20,15 @@ const PlayerList = ({setShowDetails}) => {
     
     return (
         <>
-            <h1>Players</h1>
+            <h1>Puppies</h1>
             {
                 puppies.map((singlePuppy) => {
-                    return (<div onClick={setShowDetails(true)}  key={singlePuppy.name}>
+                    console.log(singlePuppy)
+                    return (
+                        <div onClick={() => {
+                            setShowDetails(true);
+                            setSinglePuppyDetailsURL(singlePuppy.url)
+                        }}  key={singlePuppy.name}>
                         {singlePuppy.name}</div>
                     )
                 })  
