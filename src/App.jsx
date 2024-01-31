@@ -12,7 +12,7 @@ const App = () => {
       <h1>Puppy Bowl</h1>
 
       {
-        showDetails ? <PuppyDetails /> : <PlayerList setShowDetails={setShowDetails} setsinglePuppyDetailsURL = {setsinglePuppyDetailsURL}/>
+        showDetails ? <PuppyDetails singlePuppyDetailsURL={singlePuppyDetailsURL} /> : <PlayerList setShowDetails={setShowDetails} setsinglePuppyDetailsURL = {setsinglePuppyDetailsURL}/>
       }
     </>
   )  
