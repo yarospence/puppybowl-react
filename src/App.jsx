@@ -5,14 +5,17 @@ import { useState } from 'react';
 const App = () => {
   
   const [showDetails, setShowDetails] = useState(false)
-  const [singlePuppyDetailsURL, setsinglePuppyDetailsURL] = useState(``);
+  const [singlePuppyDetails, setSinglePuppyDetails] = useState(``);
   
   return (
     <>
       <h1>Puppy Bowl</h1>
 
       {
-        showDetails ? <PuppyDetails singlePuppyDetailsURL={singlePuppyDetailsURL} /> : <PlayerList setShowDetails={setShowDetails} setsinglePuppyDetailsURL = {setsinglePuppyDetailsURL}/>
+        showDetails ? <PuppyDetails singlePuppyDetails={singlePuppyDetails} /> : <PlayerList setShowDetails={setShowDetails} setSinglePuppyDetails = {setSinglePuppyDetails}/> 
+      }
+      {
+        console.log(singlePuppyDetails)
       }
     </>
   )  

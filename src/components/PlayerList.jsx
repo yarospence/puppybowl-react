@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const state = {
     puppies: []
 }
-const PlayerList = ({setShowDetails}) => {
+const PlayerList = ({setShowDetails, setSinglePuppyDetails} ) => {
     const [puppies, setPuppies] = useState([])
     
     useEffect(() => {
@@ -27,7 +27,7 @@ const PlayerList = ({setShowDetails}) => {
                     return (
                         <div onClick={() => {
                             setShowDetails(true);
-                            setSinglePuppyDetailsURL(singlePuppy.url)
+                            setSinglePuppyDetails(singlePuppy)
                         }}  key={singlePuppy.name}>
                         {singlePuppy.name}</div>
                     )

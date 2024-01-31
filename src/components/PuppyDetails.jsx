@@ -1,8 +1,10 @@
 //user can click details button on each puppy that will lead them
-const PuppyDetails = (singlePuppyDetailsURL) => {
+const PuppyDetails = ({singlePuppyDetails}) => {
     return (
-        <h1>Puppy Details</h1>
-        console.log(singlePuppyDetailsURL);
+        <>
+                <h1>Puppy Details</h1>
+        {console.log(singlePuppyDetails)}
+        </>
     )
 }
 
